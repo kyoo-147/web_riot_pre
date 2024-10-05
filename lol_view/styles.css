@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e0e;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #1c1c1c;
+}
+.hero {
+    position: relative; /* Đặt vị trí tương đối cho hero để chứa video */
+    padding: 0; /* Không cần padding */
+}
+
+.tintuc {
+    margin-top: 20px; /* Khoảng cách giữa video và phần tin tức */
+    z-index: 1; /* Đảm bảo rằng nó nằm dưới video */
+}
+
+
+
+.play-button {
+    position: absolute; /* Vị trí tuyệt đối */
+    top: calc(65% + 20px ); /* Căn giữa theo chiều dọc và cách logo 20px */
+    left: calc(50% - 10px); /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Di chuyển nút lên trên và sang trái để hoàn thiện việc căn giữa */
+    padding: 10px 20px; /* Padding ban đầu */
+    background-color: #B8860B; /* Màu nền */
+    border: 2px solid #ffffff; /* Viền trắng */
+    border-radius: 5px; /* Bo tròn góc viền */
+    color: rgb(8, 8, 8);
+    font-size: 18px; /* Kích thước chữ ban đầu */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.play-button:hover {
+    background-color: transparent; /* Đổi sang nền trong suốt khi hover */
+    color: #ff4747; /* Đổi màu chữ sang màu đỏ */
+}
+
+
+.dKuaJR {
+    width: 100%; /* Chiều rộng 100% của vùng chứa */
+    height: 60vh; /* Chiều cao 100% của viewport */
+    object-fit: cover; /* Giữ tỉ lệ khung hình và cắt nếu cần */
+    top: 0; /* Chạm sát phía trên của viewport */
+    left: 0; /* Chạm sát phía bên trái của viewport */
+    z-index: -1; /* Đảm bảo video nằm dưới các phần tử khác */
+}
+.logo {
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 50%; /* Cách từ trên video 30% chiều cao */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Điều chỉnh vị trí để căn giữa */
+    width: 250px; /* Kích thước logo ban đầu */
+    z-index: 1; /*Đảm bảo logo nằm trên video và nút*/
+}
+
+@media (max-width: 768px) { /* Khi màn hình nhỏ hơn 768px */
+    .hero {
+        padding: 0; /* Giảm padding */
+    }
+
+    .play-button {
+        font-size: 14px; /* Giảm kích thước chữ */
+        padding: 4px 8px; /* Giảm padding để nút ngắn lại sát chữ */
+        top: calc(65% + 20px); /* Điều chỉnh vị trí nút dưới logo với khoảng cách 20px */
+        left: calc(50% - 10px); /* Điều chỉnh vị trí nút */
+        width: calc(40% - 25px); 
+    }
+
+    .logo {
+        width: calc(70% - 20px); /* Giảm kích thước logo */
+        top: 50%; /* Điều chỉnh vị trí logo */
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+.TNB {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.TNB h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.champion-list {
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding: 10px; /* Khoảng đệm cho danh sách */
+}
+
+.champion {
+    flex: 0 0 auto; /* Ngăn phần tử co lại */
+    margin: 20px; /* Khoảng cách giữa các phần tử (20px) */
+    margin-left:80px;
+}
+
+@media (min-width: 769px) {
+    .champion {
+        display: block; /* Hiển thị tất cả tướng trên desktop */
+    }
+}
+
+.champion-image {
+    width: 500px; /* Đặt chiều rộng cho hình ảnh */
+    height: auto; /* Chiều cao tự động điều chỉnh */
+    object-fit: cover; /* Giữ tỷ lệ khung hình, cắt nếu cần */
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+hr {
+    flex-grow: 1; 
+    border: none;
+    height: 2px;
+    background-color: #000;
+    margin: 0 10px; 
+} 
+
+
+.button-arrow {
+    display: flex;
+    align-items: center; /* Căn giữa các nút và đường line */
+}
+
+button {
+    background-color: #007BFF; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none; /* Xóa viền của nút */
+    padding: 10px 15px; /* Khoảng cách trong nút */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+    border-radius: 5px; /* Bo góc nút */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+@media (max-width: 768px) { /* Khi màn hình nhỏ hơn 768px */
+    
+
+    .TNB h2 {
+        font-size: 28px; /* Giảm kích thước tiêu đề */
+    }
+
+    .champion-list {
+        
+        align-items: center; /* Căn giữa */
+    }
+
+    .champion {
+        margin: 10px; /* Giảm khoảng cách giữa các phần tử */
+        display: none; /* Ẩn tất cả hình ảnh */
+    }
+
+    .champion-image {
+        width: 100%; /* Đặt chiều rộng hình ảnh bằng 100% */
+        max-width: 300px; /* Giới hạn chiều rộng tối đa */
+    }
+
+    .button-arrow {
+        flex-direction: row; /* Đặt nút mũi tên theo cột */
+    }
+
+    hr {
+        margin: 5px ; /* Giảm khoảng cách */
+    }
+
+    button {
+        width: 100%; /* Đặt nút mũi tên rộng 100% */
+        margin: 5px 0; /* Giảm khoảng cách giữa các nút */
+    }
+}
+
+
+

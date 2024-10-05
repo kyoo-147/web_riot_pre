@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    background-color: #fff;
+    color: #111;
+    margin-top: 80px; /* Đảm bảo nội dung không bị che bởi thanh menu */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    color: #fff;
+    z-index: 1000;
+    height: 80px;
+    border-bottom: 2px solid rgba(51, 51, 51, .25);
+    justify-content: space-between; /* Căn chỉnh các phần tử trong navbar */
+    flex-wrap: wrap; /* Cho phép phần tử bọc lại nếu không đủ không gian */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 13px; 
+}
+
+.logo1 {
+    transition: filter 0.1s;
+}
+
+.logo1:hover {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(1970%) hue-rotate(357deg) brightness(105%) contrast(101%);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #FFD700;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3.5px;
+    background-color: #008CBA;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    margin-left: auto;
+}
+
+/* Các phần khác vẫn giữ nguyên... */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .icon-search-icon,
+    .icon-globe-icon,
+    .play-now-btn1,
+    .menu {
+        display: none; /* Ẩn menu trên màn hình nhỏ */
+    }
+
+    .menu-icon {
+        display: block; /* Hiện biểu tượng menu */
+        cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+        font-size: 24px; /* Kích thước biểu tượng */
+        color: #fff; /* Màu sắc */
+        margin-left: auto; /* Đẩy biểu tượng menu về bên phải */
+    }
+}
+
+@media (max-width: 1124px) {
+    .menu {
+        display: none; 
+    }
+}
+

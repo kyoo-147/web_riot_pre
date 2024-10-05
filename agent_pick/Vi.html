@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AATROX</title>
+    <link rel="stylesheet" href="Vi.css">
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('main-image').src = imageSrc;
+        }
+
+        function changeVideo(videoSrc, skillDescription) {
+            var videoElement = document.getElementById('skill-video');
+            var descriptionElement = document.getElementById('skill-description');
+
+            videoElement.src = videoSrc;
+            videoElement.play();  // Bắt đầu phát video ngay khi thay đổi
+            descriptionElement.innerText = skillDescription;  // Cập nhật mô tả kỹ năng
+        }
+    </script>
+    <style>
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column; /* Đặt hướng xếp hàng thành cột */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="imgs/logoriotgame.png" class="logo1" height="70" alt="Logo 1">
+            <img src="imgs/logoriotgame2.png" class="logo2" height="30" alt="Logo 2">
+        </div>
+        <nav class="menu">
+            <a href="#">TRÒ CHƠI</a>
+            <a href="#">TƯỚNG</a>
+            <a href="#">TIN TỨC</a>
+            <a href="#">CHI TIẾT CẬP NHẬT</a>
+            <a href="#">ESPORTS</a>
+            <a href="#">VŨ TRỤ</a>
+            <a href="#">HỖ TRỢ</a>
+        </nav>
+        <div class="right-section">
+            <div class="container">
+                    <input checked="" class="checkbox" type="checkbox"> 
+                    <div class="mainbox">
+                        <div class="iconContainer">
+                            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+                        </div>
+                     <input class="search_input" placeholder="search" type="text">
+                    </div>
+                </div>
+            <img src="imgs/globeicon.png" class="icon-globe-icon" height="20">
+                <button>
+                    <span class="span-mother">
+                        <span>P</span>
+                        <span>l</span>
+                        <span>a</span>
+                        <span>y</span>
+                      </span>
+                      <span class="span-mother2">
+                        <span>N</span>
+                        <span>o</span>
+                        <span>w</span>
+                      </span>
+                </button>
+            <div class="menu-icon">☰</div> 
+        </div>
+    </header>
+    <section>
+        <div class="image-container">
+            <img src="imgs/Aatrox_0.jpg" class="imgone" alt="Aatrox Image">
+            <div class="overlay">
+                <h1 class="TheDarkinBlade">Quỷ Kiếm Darkin</h1>
+                <h2 class="aatrox">Aatrox</h2>
+                <p class="Gioithieu">Từng là những người bảo hộ cao quý của Shurima để chống lại Hư Không, Aatrox cùng đồng bọn cuối cùng lại trở thành một mối hiểm họa còn lớn hơn đối với cả Runeterra. Chỉ bị đánh bại bằng món phép thuật khôn ngoan của nhân loại. Nhưng sau nhiều thế kỉ bị giam cầm, Aatrox là kẻ đầu tiên một lần nữa tìm về với tự do, bằng cách vấy bẩn và biến đổi những kẻ ngu ngốc dám cầm thử thứ vũ khí ma thuật chứa đựng linh hồn hắn. Giờ đây, với da thịt chiếm đoạt được, hắn quay trở lại Runeterra trong một hình hài khủng khiếp tương tự trước đây, tìm kiếm sự tàn sát và trả món hận thù năm xưa.</p>
+            </div>
+            <div class="role">
+                <div class="rolee">
+                    <div class="icon-container">
+                        <img src="icon\Top.webp" alt="Vai trò Đấu Sĩ" class="icon">
+                        <p class="label">Vai Trò</p>
+                        <p class="label2">Đấu Sĩ</p>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icon\Top.webp" alt="Vai trò Đấu Sĩ" class="icon">
+                        <p class="label">Độ Khó </p>
+                        <p class="label2">Trung Bình </p>
+                    </div>
+                </div>
+            </div>
+            <div class="duong"></div>
+            <div class="thongthao">
+                <p>thông thạo tướng</p>
+                <a href="https://u.gg/lol/vn_vn/champions/aatrox/build">OP.GG</a>
+                <a href="https://www.leagueofgraphs.com/vn/champions/builds/aatrox">u.gg</a>
+                <a href="https://vn.op.gg/champion/Aatrox/statistics/mid">leagueofgraphs.com</a>
+            </div>
+        </div>
+    
+        <!-- Nội dung giữa hai hình ảnh -->
+        <div class="middle-content">
+            <div class="skill-video-container">
+                <div class="kynang">
+                    <h2 class="textkynang">Kỹ Năng</h2>
+                    <div class="skill-images">
+                        <div>
+                            <img src="imgs/Aatrox_Passive.png" alt="Nội Tại" onclick="changeVideo('Video/A.mp4', 'Nội Tại')">
+                            <p class="skill-description">Đường Kiếm Tuyệt Diệt</p>
+                        </div>
+                        <div>
+                            <img src="imgs/AatroxQ.png" alt="Kỹ năng Q" onclick="changeVideo('Video/Q.mp4', 'Kỹ năng Q')">
+                            <p class="skill-description">Quỷ Kiếm Darkin</p>
+                        </div>
+                        <div>
+                            <img src="imgs/AatroxW.png" alt="Kỹ năng W" onclick="changeVideo('Video/W.mp4', 'Kỹ năng W')">
+                            <p class="skill-description">Xiềng Xích Địa Ngục</p>
+                        </div>
+                        <div>
+                            <img src="imgs/AatroxE.png" alt="Kỹ năng E" onclick="changeVideo('Video/E.mp4', 'Kỹ năng E')">
+                            <p class="skill-description">Bộ Pháp Hắc Ám</p>
+                        </div>
+                        <div>
+                            <img src="imgs/AatroxR.png" alt="Kỹ năng R" onclick="changeVideo('Video/R.mp4', 'Kỹ năng R')">
+                            <p class="skill-description">Chiến Binh Tận Thế</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <video class="video" id="skill-video" controls autoplay loop muted>
+                        <source src="Video/A.mp4" type="video/mp4">
+                    </video>
+                    <p class="videonoitai">Đường Kiếm Tuyệt Diệt</p>
+                    <p class="noitai">NỘI TẠI</p>
+                    <p class="chieu">Theo chu kỳ, đòn đánh kế tiếp của Aatrox gây thêm sát thương vật lý và hồi máu, dựa theo máu tối đa của mục tiêu.</p>
+                </div>        
+            </div>
+        </div>
+    
+        <!-- Hình ảnh thứ hai -->
+        <p class="text3">Trang Phục Hiện Có</p>
+        <img src="imgs/Aatrox_2.jpg" class="second-image" id="main-image" alt="Aatrox Skin">
+        <div class="phan2">
+            <div>
+                <img src="imgs/Aatrox_0.jpg" alt="Skin 1" onclick="changeImage('imgs/Aatrox_0.jpg')">
+                <p>Aatrox</p>
+            </div>
+            <div>
+                <img src="imgs/Aatrox_1.jpg" alt="Skin 2" onclick="changeImage('imgs/Aatrox_1.jpg')">
+                <p>Aatrox Công Lý</p>
+            </div>
+            <div>
+                <img src="imgs/Aatrox_2.jpg" alt="Skin 3" onclick="changeImage('imgs/Aatrox_2.jpg')">
+                <p>Aatrox Máy Móc</p>
+            </div>
+            <div>
+                <img src="imgs/Aatrox_3.jpg" alt="Skin 4" onclick="changeImage('imgs/Aatrox_3.jpg')">
+                <p>Aatrox Thợ Săn Đại Dương</p>
+            </div>
+            <div>
+                <img src="imgs/Aatrox_20.jpg" alt="Skin 4" onclick="changeImage('imgs/Aatrox_20.jpg')">
+                <p>Aatrox Huyết Nguyệt</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="hotro">
+            <a class="trangchinh" href="https://www.leagueoflegends.com/vi-vn/how-to-play/">về liên minh huyền thoại</a>
+            <a class="trangchinh" href="https://support.riotgames.com/">hỗ trợ</a>
+            <a class="trangchinh" href="https://www.lolesports.com/">trang esports chính</a>
+        </div>
+        <div class="truyenthong">
+            <a href="https://www.facebook.com/LeagueoflegendsVN/">
+                <img src="imgs\facebookk.png" class="anh">
+            </a>
+            <a href="https://www.instagram.com/lmhtvietnam/">
+                <img src="imgs\instagramm.png" class="anh">
+            </a>
+            <a href="https://www.youtube.com/@lmhtvietnam">
+                <img src="imgs\youtubee.png" class="anh">
+            </a>
+        </div>
+        <div class="nhom">
+            <a href="http://www.riotgames.com/">
+                <img src="imgs/logoriotgame.png" class="riott">
+            </a>
+            <img src="imgs/unggames.png" class="ung" >
+        </div>
+        <div class="text">
+            <p>© 2009-2022 bởi Tập Đoàn Riot Games. LIÊN MINH HUYỀN THOẠI và mọi logo liên quan là nhãn hiệu, nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
+        </div>
+        <div class="baomat">
+            <a class="baomatt" href="https://www.riotgames.com/vi/privacy-notice">chính sách bảo mật</a>
+            <a class="baomatt" href="https://www.riotgames.com/vi/terms-of-service">điều khoản sự dụng (riot)</a>
+            <a class="baomatt">tùy chọn cookies</a> 
+        </div>
+        <div class="tuoi">
+            <img src="imgs/18+.png">
+        </div>
+    </footer>
+</body>
+</html>

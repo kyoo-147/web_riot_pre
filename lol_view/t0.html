@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS cho modal */
+        .RiotBar-RsoModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .RiotBar-RsoModal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .close-icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar"> 
+    <div class="logo-container">
+        <div>
+            <img src="img/logoriotgame.png" alt="Logo 1" class="logo1" height="70">
+        </div>
+        <div>
+            <img src="img/logoriotgame2.png" alt="Logo 2" class="logo2" height="30">
+        </div>
+    </div>
+    <nav class="menu">
+        <a href="#">TRÒ CHƠI</a>
+        <a href="#">TƯỚNG</a>
+        <a href="#">TIN TỨC</a>
+        <a href="#">CHI TIẾT CẬP NHẬT</a>
+        <a href="#">ESPORTS</a>
+        <a href="#">VŨ TRỤ</a>
+        <a href="#">HỖ TRỢ</a>
+    </nav>
+    <div class="right-section">
+        <img src="img/seachicon.png" alt="Search" class="icon-search-icon" height="20">
+        <img src="img/globeicon.png" alt="Language" class="icon-globe-icon" height="20">
+        <button class="play-now-btn1" id="playButton" data-toggle="modal">CHƠI NGAY</button>
+        <div class="menu-icon">☰</div> 
+    </div>
+</header>
+
+<div class="RiotBar-RsoModal">
+    <div class="close-icon" role="button" aria-label="Close">&times;</div>
+    <div class="RiotBar-RsoModal-content">
+        <h2>Chuẩn Bị Sẵn Sàng Để Chơi</h2>
+        <!-- Nội dung khác -->
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('[data-toggle="modal"]').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelector('.RiotBar-RsoModal').style.display = 'flex'; // Hiển thị modal
+        });
+    });
+
+    // Đóng modal khi nhấn vào nút đóng
+    document.querySelector('.close-icon').addEventListener('click', function() {
+        document.querySelector('.RiotBar-RsoModal').style.display = 'none'; // Ẩn modal
+    });
+
+    // Ẩn modal khi click bên ngoài nội dung
+    document.querySelector('.RiotBar-RsoModal').addEventListener('click', function(event) {
+        if (event.target === this) {
+            this.style.display = 'none'; // Ẩn modal
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+.MediaPromoBlade {
+    display: flex; /* Sử dụng Flexbox cho phần chính */
+}
+
+.backdrop-background {
+    display: flex; /* Sử dụng Flexbox để bố trí hình ảnh và nội dung */
+    flex-direction: row; /* Sắp xếp theo chiều ngang cho desktop */
+    position: relative; /* Để đảm bảo backdrop nằm dưới nội dung chính */
+    background-image: url('img/backdrop1.png'); /* Đặt hình nền */
+    background-size: cover; /* Để hình nền phủ toàn bộ phần tử */
+    background-position: center; /* Để căn giữa hình nền */
+    height: 150vh; /* Đặt chiều cao cho backdrop */
+    flex: 1;
+}
+
+.mediapromo-image {
+    flex: 1; /* Chiếm không gian cho hình ảnh */
+    display: flex; /* Sử dụng Flexbox để căn giữa hình ảnh */
+    justify-content: center; /* Căn giữa hình ảnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.mediapromo-image img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của ô */
+    height: auto; /* Để giữ tỉ lệ cho hình ảnh */
+}
+
+.mediapromo-main-container {
+    flex: 1; /* Chiếm không gian cho nội dung văn bản */
+    padding: 20px; /* Khoảng cách bên trong */
+    color: rgb(255, 254, 254); /* Màu chữ */
+    display: flex; /* Sử dụng Flexbox cho nội dung */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+}
+
+.supertitle {
+    font-size: 25px; /* Kích thước chữ cho tiêu đề phụ */
+    margin-bottom: 10px; /* Khoảng cách dưới cho tiêu đề phụ */
+}
+
+.title {
+    font-size: 50px; /* Kích thước chữ cho tiêu đề chính */
+    font-weight: bold; /* Đậm tiêu đề chính */
+    margin-bottom: 10px; /* Khoảng cách dưới cho tiêu đề chính */
+}
+
+.description {
+    font-size: 20px; /* Kích thước chữ cho mô tả */
+    margin-bottom: 20px; /* Khoảng cách dưới cho mô tả */
+}
+
+.mediapromo-links {
+    margin-top: 10px; /* Khoảng cách trên cho nút */
+}
+
+.Buttons {
+    display: inline-block; /* Để nút không chiếm toàn bộ chiều rộng */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    background-color: #C8AA6E; /* Màu nền cho nút */
+    color: rgb(10, 10, 10); /* Màu chữ cho nút */
+    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    border-radius: 5px; /* Bo góc cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.Buttons:hover {
+    background-color: #d3bb8b; /* Màu nền khi hover */
+}
+
+/* Media query cho thiết bị di động */
+@media (max-width: 768px) {
+    .MediaPromoBlade {
+        flex-direction: column; /* Sắp xếp theo chiều dọc */
+    }
+    
+    .backdrop-background {
+        flex-direction: column; /* Chuyển sang chiều dọc cho mobile */
+        align-items: center; /* Căn giữa nội dung */
+        height: auto; /* Chiều cao tự động cho mobile */
+    }
+
+    .mediapromo-image {
+        order: 2; /* Đảm bảo hình ảnh nằm dưới cho mobile */
+        margin-top: 20px; /* Khoảng cách trên cho hình ảnh */
+        width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+        display: flex; /* Để căn giữa hình ảnh */
+        justify-content: center; /* Căn giữa hình ảnh */
+    }
+
+    .mediapromo-image img {
+        max-width: 90%; /* Hình ảnh không vượt quá 90% chiều rộng */
+        height: auto; /* Giữ tỉ lệ cho hình ảnh */
+    }
+
+    .mediapromo-main-container {
+        padding: 10px; /* Khoảng cách nhỏ hơn cho mobile */
+        text-align: center; /* Căn giữa nội dung văn bản */
+        margin-top: 20px; /* Khoảng cách trên cho nội dung văn bản */
+        margin-bottom: 20px; /* Khoảng cách dư��i cho nội dung văn bản */
+    }
+
+    .supertitle {
+        font-size: 15px; /* Kích thước chữ nhỏ hơn cho mobile */
+    }
+
+    .title {
+        font-size: 20px; /* Kích thước chữ nhỏ hơn cho mobile */
+    }
+
+    .description {
+        font-size: 12px; /* Kích thước chữ nhỏ hơn cho mobile */
+    }
+
+    .mediapromo-links {
+        margin-top: 10px; /* Khoảng cách nhỏ hơn cho nút */
+    }
+
+    .Buttons {
+        width: 40%; /* Nút chiếm toàn bộ chiều rộng */
+        padding: 10px; /* Khoảng cách bên trong nút lớn hơn */
+    }
+}

@@ -1,0 +1,146 @@
+/* div {
+    
+    padding: 30px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    margin: 20px;
+} */
+.backdrop {
+    position: relative; 
+    height: auto; /* Cho phép chiều cao điều chỉnh theo nội dung */
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; /* Xếp chồng các phần tử theo chiều dọc trên màn hình nhỏ */
+    align-items: center; 
+    padding: 20px; 
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+.backdrop::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(248, 245, 245, 0.973); 
+    z-index: -1; 
+    background-color: white; 
+}
+
+.left-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    z-index: 1; 
+    color: black; 
+    text-align: center; /* Căn giữa chữ cho di động */
+}
+
+.left-content p {
+    margin-bottom: 10px;   
+    font-size: 18px; /* Kích thước chữ nhỏ hơn cho di động */
+}
+
+.left-content h3 {
+    margin-bottom: 10px; 
+    font-size: 40px; /* Kích thước chữ nhỏ hơn cho di động */
+}
+
+.general1 {
+    position: relative; 
+    z-index: 1; 
+    max-width: 100%; /* Cho phép chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    width: 100%; 
+    color: black; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.general-image {
+    width: 100%; 
+    max-width: 600px; /* Chiều rộng tối đa điều chỉnh */
+    height: auto; 
+    display: block; 
+    margin-bottom: 20px; 
+}
+
+.general1 p {
+    margin-top: 15px; 
+    color: rgb(78, 78, 78);
+    font-weight: bold; /* Đánh dấu chữ đầu câu */
+}
+
+.buttons {
+    margin-top: 20px; 
+    display: flex; /* Sử dụng flexbox để xếp chồng nút */
+    flex-direction: column; /* Xếp chồng nút theo chiều dọc */
+}
+
+.buttons button {
+    padding: 10px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    color: rgb(12, 12, 12); 
+    cursor: pointer; 
+    margin: 5px ; /* Khoảng cách giữa các nút */
+}
+
+.button-1 {
+    background-color: #C8AA6E; 
+}
+
+.button-1:hover {
+    background-color: #d3bb8b;
+}
+
+.button-2 {
+    background-color: #59C1DE; 
+}
+
+.button-2:hover {
+    background-color: #7acde4; 
+}
+
+.icons {
+    display: flex; 
+    flex-wrap: wrap; /* Cho phép biểu tượng bao bọc trên màn hình nhỏ */
+    justify-content: center; 
+    margin-top: 20px; 
+    width: 100%; 
+}
+
+.icon {
+    text-align: center; 
+    margin: 10px; /* Thêm khoảng cách cho các biểu tượng */
+}
+
+.icons img {
+    width: 50px; /* Kích thước lớn hơn cho dễ nhìn */
+    height: auto; 
+    margin-bottom: 5px; 
+}
+
+/* Media queries cho màn hình lớn hơn */
+@media (min-width: 768px){
+    .backdrop {
+        flex-direction: row; /* Chuyển lại thành bố cục hàng cho màn hình lớn */
+    }
+    .left-content {
+        text-align: left; /* Căn trái chữ cho màn hình lớn */
+    }
+    .left-content p {
+        font-size: 20px; /* Kích thước chữ lớn hơn cho desktop */
+    }
+    .left-content h3 {
+        font-size: 60px; /* Kích thước chữ lớn hơn cho desktop */
+    }
+    .general-image {
+        max-width: 800px; /* Hình lớn hơn trên desktop */
+    }
+    .buttons {
+        flex-direction: row; /* Căn ngang các nút trên desktop */
+    }
+}

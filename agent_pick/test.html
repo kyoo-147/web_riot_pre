@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh điều hướng</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="imgs/logoriotgame.png" class="logo1" height="70" alt="Logo 1">
+            <img src="imgs/logoriotgame2.png" class="logo2" height="30" alt="Logo 2">
+        </div>
+        <nav class="menu">
+            <a href="#">TRÒ CHƠI</a>
+            <a href="#">TƯỚNG</a>
+            <a href="#">TIN TỨC</a>
+            <a href="#">CHI TIẾT CẬP NHẬT</a>
+            <a href="#">ESPORTS</a>
+            <a href="#">VŨ TRỤ</a>
+            <a href="#">HỖ TRỢ</a>
+        </nav>
+        <div class="right-section">
+            <div class="search">
+                <div class="input-wrapper">
+                    <button class="icon">
+                      <svg
+                        width="25px"
+                        height="25px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                          stroke="#fff"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M22 22L20 20"
+                          stroke="#fff"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                    <input type="text" name="text" class="input" placeholder="search.." />
+                </div>
+            </div>
+            <img src="imgs/globeicon.png" alt="Globe" class="icon-globe-icon" height="20">
+            <button class="play-now-btn1">CHƠI NGAY</button>
+            <div class="menu-icon">☰</div>
+        </div>
+        <div class="menu-dropdown">
+            <img src="imgs/logoriotgame2.png" class="logo1-dropdown" height="30" alt="Logo 1">
+            <div class="close-menu">✕</div> <!-- Dấu X để đóng menu -->
+            <nav class="menu1-dropdown">
+                <a href="#">TRÒ CHƠI</a>
+                <a href="#">TƯỚNG</a>
+                <a href="#">TIN TỨC</a>
+                <a href="#">CHI TIẾT CẬP NHẬT</a>
+                <a href="#">ESPORTS</a>
+                <a href="#">VŨ TRỤ</a>
+                <a href="#">HỖ TRỢ</a>
+            </nav>
+            <button class="play-now-btn-dropdown">CHƠI NGAY</button> <!-- Nút CHƠI NGAY trong dropdown -->
+        </div>
+    </header>
+    <section class="noidung">
+    </section>
+    <script>
+        // Xử lý nhấp vào biểu tượng ba gạch để mở menu
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            const dropdownMenu = document.querySelector('.menu-dropdown');
+            dropdownMenu.classList.toggle('show'); // Thêm/loại bỏ class show để mở/đóng menu
+        });
+
+        // Xử lý nhấp vào dấu X để đóng menu
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            const dropdownMenu = document.querySelector('.menu-dropdown');
+            dropdownMenu.classList.remove('show'); // Loại bỏ class show để đóng menu
+        });
+    </script>
+</body>
+</html>

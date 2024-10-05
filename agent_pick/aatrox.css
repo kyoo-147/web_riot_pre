@@ -1,0 +1,592 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/** header**/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    position: fixed; /* Đặt thanh điều hướng cố định */
+    top: 0; /* Cố định nó ở đầu trang */
+    width: 100%; /* Độ rộng 100% */
+    z-index: 1000; /* Đảm bảo nó nằm trên các thành phần khác */
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.logo1:hover {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(1970%) hue-rotate(357deg) brightness(105%) contrast(101%);
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-right: 300px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #FFD700;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3.5px;
+    background-color: #008CBA;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Phần bên phải */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Icon */
+.icon-search-icon,
+.icon-globe-icon {
+    margin: 0 10px;
+}
+
+/* Nút CHƠI NGAY */
+.play-now-btn1 {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Menu icon (3 gạch) */
+.menu-icon {
+    color:#fff;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Thiết lập cho responsive */
+@media (max-width: 900px) {
+    .menu,.icon-search-icon,.search,.play-now-btn1,.navbar{  
+        display: none;
+    }
+    
+    /*.menu-icon {
+        display: block;
+    }*/
+}
+
+/* Giao diện cho menu khi nhấp vào icon (menu nằm bên phải) */
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;   
+    background-color: black; /* Màu nền tối với độ mờ */
+    color: #fff;
+    z-index: 1000;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt */
+    transform: translateX(100%); /* Ban đầu ẩn menu ra ngoài màn hình */
+}
+
+/* Khi có class show thì hiển thị menu */
+.menu-dropdown.show {
+    transform: translateX(0); /* Hiện menu */
+    display: block;
+}
+
+/* Liên kết trong menu dropdown */
+.menu-dropdown a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.menu-dropdown a:hover {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Dấu X để đóng menu */
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+/* Nút CHƠI NGAY trong dropdown */
+.play-now-btn-dropdown {
+background-color: #007BFF;
+color: #fff;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+width: 80%;
+margin: 20px; /* Khoảng cách từ các cạnh */
+position: absolute;
+left: 45%;
+transform: translateX(-50%);
+}
+.menu1-dropdown{
+margin-top: 100px;
+padding:0 10px;
+}
+.logo1-dropdown{
+position: absolute;
+top: 20px;
+left: 20px;
+cursor: pointer;
+color: #fff;
+}
+/** section**/
+section {
+    align-items: center;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width:100%; 
+}
+
+/**phan1**/
+.section1{
+    background-color: rgb(10, 20, 40); 
+    position: relative; /* Để đặt văn bản lên hình ảnh */
+}
+.imgone {
+    width: 100%; /* Chiều rộng 100% để chiếm toàn bộ màn hình */
+    height: auto; /* Chiều cao tự động để duy trì tỷ lệ */
+    max-height: 1000px;
+}
+.overlay {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 40%; /* Giữa theo chiều dọc */
+    left: 500px; /* Giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Để căn giữa hoàn hảo */
+}
+.gioithieu{
+    color: rgb(255, 255, 255); /* Màu chữ */
+    text-align: left; /* Căn trái văn bản */
+    max-width: 600px;
+}
+.text1{
+    font-size: 32px;
+    color:rgb(200, 170, 110);
+    font-weight: 700; /* In đậm chữ */
+    text-transform: uppercase; /* In hoa chữ */
+    margin:10px 10px;
+}
+.text2{
+    font-size: 100px;
+    color:rgb(255, 255, 255);
+    font-weight: 700; /* In đậm chữ */
+    text-transform: uppercase; /* In hoa chữ */
+    font-style: italic;
+    margin:10px 10px;
+}
+.role {
+    margin-bottom: 20px;
+}
+.rolee {
+    display:flex;
+    gap:20px;
+}
+.icon-container {
+    border: 1px solid rgb(200, 170, 110);; /* Đường viền xung quanh */
+    padding: 10px; /* Khoảng cách giữa đường viền và nội dung */
+    background-color: rgb(10, 20, 40); 
+    text-align: center;
+    width:100px;
+    height:100px;
+}
+
+.vaitro {
+    width: 70px; /* Đặt chiều rộng cho icon */
+    height: 70px; /* Đặt chiều cao cho icon */
+}
+
+.label {
+    font-size: 10px;
+    color:rgb(255, 255, 255);
+    margin-bottom: 5px;
+    margin-top:-10px;
+    text-transform: uppercase; /* In hoa chữ */
+}
+.label2 {
+    font-size: 10px;
+    color:bisque;
+    text-transform: uppercase; /* In hoa chữ */
+}
+.duong{
+    width: 100%; /* Độ dài của đường thẳng */
+    height: 2px; /* Độ dày của đường thẳng */
+    background-color: rgb(200, 170, 110); /* Màu sắc của đường thẳng */
+}
+.thongthao{
+    display:flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    color:rgb(255, 255, 255);
+}
+a{
+    margin-top:10px;
+    margin-right:15px;
+    font-size: 12px; /* Đảm bảo kích thước chữ của link giống với chữ thường */
+    color: rgb(255, 255, 255); /* Màu chữ của liên kết giống với chữ "thông thạo tướng" */
+    text-decoration: none; /* Loại bỏ gạch chân khỏi liên kết */
+}
+a:hover{
+    text-decoration: underline;
+    color:rgb(200, 170, 110);
+}
+.nhom2{
+    margin-top: 100px;
+}
+@media (max-width: 900px) {
+    .overlay {
+        position: relative; /* Đổi sang vị trí tương đối */
+        top: auto; /* Đặt lại vị trí trên */
+        left: auto; /* Đặt lại vị trí trái */
+        transform: none; /* Bỏ hiệu ứng căn giữa */
+        margin: 20px; /* Khoảng cách từ các cạnh */
+        z-index: 1; /* Đặt lớp overlay dưới hình ảnh */
+    }
+    .text1{
+        font-size: 8vw;
+    }
+    .text2{
+        font-size: 20vw;
+    }
+    a{
+        font-size: 2.5vw;
+    }
+}
+
+/**phan2*/
+.section2{
+    align-items: center;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    display:flex;
+    background-color: rgb(10, 20, 40); 
+}
+.kynang{
+    text-align: center;
+}
+.kynangg{
+    font-size: 108px;
+    line-height: 50px;
+    font-weight: 700;
+    color:white;
+    font-style: italic;
+}
+.skill-images {
+    display: flex;
+    gap: 1vw;
+    scroll-snap-type: x mandatory; /* Tạo hiệu ứng snap */
+    -webkit-overflow-scrolling: touch; /* Cải thiện trải nghiệm cuộn trên thiết bị di động */
+}
+
+.skill-images div {
+    scroll-snap-align: start; /* Tự động căn chỉnh khi cuộn */
+}
+
+.skill-images img {
+    max-width: 100%; /* Giúp hình ảnh tự động điều chỉnh kích thước theo khung hình */
+    height: auto; /* Giữ tỷ lệ khung hình cho hình ảnh */
+}
+
+.skill-images img:hover {
+    transform: scale(1.05);
+}
+
+.skill-description {
+    font-size: 12px;
+    color: aliceblue;
+    width: 100px;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-weight: 10;
+}
+video {
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    max-width: 70vw;
+    border: 1px solid rgb(200, 170, 110); /* Đường viền màu */
+    padding: 1vw;
+    transition: opacity 1s ease-in-out; /* Thêm hiệu ứng cho opacity */
+}
+.noitai{
+    text-align: center;
+    padding:20px;
+}
+.text6{
+    font-size: 32px;
+    line-height: 22px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+.text4{
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+}
+.text5{
+    font-size: 18px;
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    color: white;
+}
+@media (max-width: 900px) {
+    .section2 {
+        flex-direction: column; /* Chuyển đổi sang xếp theo chiều dọc */
+        align-items: center; /* Căn giữa các phần tử */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        padding:10% 10%;
+    }
+    .noitai{
+        width: 90%; /* Đặt chiều rộng cho mỗi lớp chiếm toàn bộ chiều rộng màn hình */
+        height:auto; 
+    }
+    .kynangg{
+        font-size: 15vw;
+    }
+    .text6{
+        font-size: 5vw;
+    }
+    .text4{
+        font-size: 2vw;
+    }
+    .text5{
+        font-size: 3vw;
+        padding:0 10%;
+    }
+    .skill-images {
+        flex-wrap: nowrap; /* Giữ cho tất cả các hình ảnh nằm trong một dòng */
+        overflow-x: auto; /* Kích hoạt cuộn ngang */
+        max-width: 300px;
+    }
+
+    .skill-images img {
+        flex: 0 0 auto; /* Không cho phép hình ảnh co giãn */
+        width: 64px; /* Thay đổi kích thước hình ảnh cho tương thích */
+        height: 64px; /* Giữ tỷ lệ khung hình cho hình ảnh */
+    }
+
+    .skill-description {
+        font-size: 10px; /* Thay đổi kích thước chữ mô tả cho tương thích */
+    }
+}
+
+
+/**phan3**/
+.section3{
+    text-align: center;
+    text-transform: uppercase; /* In hoa chữ */
+}
+.second-image {
+    width: 90%; /* Đặt chiều rộng cụ thể cho hình ảnh thứ hai */
+    height: 90%; /* Đặt chiều cao cụ thể cho hình ảnh thứ hai */
+    margin: 0 auto; /* Căn giữa hình ảnh */
+}
+.phan2 {
+    display: flex; /* Sử dụng Flexbox để căn giữa các hình ảnh */
+    justify-content: flex-start; /* Căn trái để đảm bảo không có khoảng trống lớn */
+    flex-wrap: nowrap; /* Không cho phép các hình ảnh xuống hàng */
+    margin: 20px auto; /* Tạo khoảng cách trên và dưới và căn giữa toàn bộ phần */
+    gap: 10px; /* Khoảng cách giữa các hình ảnh */
+    overflow-x: auto; /* Kích hoạt thanh cuộn ngang */
+    max-width: 1400px; /* Chiều rộng tối đa của phần */
+    padding: 10px; /* Thêm padding để tạo khoảng cách bên trong */
+}
+
+.phan2::-webkit-scrollbar {
+    height: 3px; /* Chiều cao của thanh cuộn */
+}
+
+.phan2::-webkit-scrollbar-thumb {
+    background-color: black; /* Màu sắc của thanh cuộn */
+    border-radius: 5px; /* Đường viền cho thanh cuộn */
+}
+
+.phan2 img {
+    flex: 0 0 auto; /* Không cho phép hình ảnh co giãn */
+    width: 270px; /* Chiều rộng cho mỗi hình ảnh */
+    height: 150px; /* Chiều cao cho mỗi hình ảnh */
+    margin: 5px; /* Khoảng cách giữa các hình ảnh */
+    transition: transform 0.2s; /* Thêm hiệu ứng cho hover */
+}
+
+.phan2 img:hover {
+    box-sizing: border-box; /* Bao gồm padding và border trong kích thước */
+    transform: scale(1.05); /* Phóng to hình ảnh khi hover */
+    border: 2px solid rgb(200, 170, 110); /* Đường viền khi hover */
+    padding: 5px; /* Padding cho hình ảnh */
+}
+
+
+.text3{
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 700;
+    width:700px;
+}
+@media (max-width: 900px) {
+    .text3 {
+        font-size: 5vw;
+        text-align: left;
+        padding-left: 5%;
+    }
+    .phan2 {
+        overflow-x: auto; /* Kích hoạt thanh cuộn ngang */
+        max-width: 90%; /* Chiều rộng tối đa của phần */
+        font-size: 2vw;
+    }
+
+    .phan2 img {
+        width: 20vw; /* Đặt chiều rộng hình ảnh tương thích */
+        height: auto; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    }
+}
+/**footer**/
+footer {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .hotro, .nhom, .baomat, .text {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+.hotro{
+    display: flex;
+    background-color: rgb(43, 39, 39);
+    width:100%;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    align-items: center;
+    gap:20px;
+}
+.trangchinh{
+    text-transform: uppercase; /* In hoa chữ */
+    font-size: 16px;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding:10px;
+}
+.trangchinh:hover{
+    text-decoration: none;
+    background-color: rgb(68, 62, 62);
+}
+.truyenthong {    
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa các mục */
+    margin: 30px 0; /* Khoảng cách trên và dưới 30px */
+}
+.anh{
+    width:32px;
+    height:32px;
+    background-color: rgb(255, 255, 255);
+    border:3px solid rgb(82, 76, 76);
+    border-radius: 40%;
+}
+.nhom{
+    display:flex;
+    gap:20px;
+}
+.riott {
+    height: 100px; /* Điều chỉnh kích thước logo */
+    width:130px;
+    filter: grayscale(100%) brightness(45%) sepia(10%) hue-rotate(0deg) saturate(0%); /* Chuyển hình ảnh thành màu vàng */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt khi chuyển đổi */
+}
+.riott:hover{
+    filter: brightness(0) invert(1);
+}
+.ung{
+    height:19px;
+    width:116px;
+    margin-top: 50px;
+}
+.text {
+    font-size: 16px;
+    color: #7e7e7e;
+    text-align: center;
+    max-width: 700px;
+    margin:5px;
+}
+.baomat {
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    gap: 30px; /* Khoảng cách giữa các mục */
+    text-transform: uppercase; /* In hoa chữ */
+    margin:5px;
+}
+.baomatt{
+    position: relative;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    padding:10px;
+    cursor: pointer; /* Thay đổi con trỏ thành con trỏ nhấp chuột */
+}
+.baomatt:hover{
+    background-color: #242323;
+    text-decoration: none;
+}
+.tuoi{
+    margin-bottom: 30px;
+    border:10px solid rgb(41, 38, 38);
+    border-radius: 5px;
+}
+/* main */
+.noidung{
+    width:100%;
+    height:1000px;
+    background-color: #000000;
+}

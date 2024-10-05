@@ -1,0 +1,93 @@
+footer {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    width: 100%;
+}
+
+.hotro{
+    display: flex;
+    background-color: rgb(43, 39, 39);
+    width:100%;
+    height:50px;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    align-items: center;
+    gap:20px;
+    padding:10px;
+}
+.trangchinh{
+    text-transform: uppercase; /* In hoa chữ */
+    font-size: 16px;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding:10px;
+}
+.trangchinh:hover{
+    background-color: rgb(68, 62, 62);
+}
+.truyenthong {    
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa các mục */
+    margin: 30px 0; /* Khoảng cách trên và dưới 30px */
+}
+.anh{
+    width:32px;
+    height:32px;
+    background-color: rgb(255, 255, 255);
+    border:3px solid rgb(82, 76, 76);
+    border-radius: 40%;
+}
+.nhom{
+    display:flex;
+    gap:20px;
+}
+.riott {
+    height: 100px; /* Điều chỉnh kích thước logo */
+    width:130px;
+    filter: grayscale(100%) brightness(45%) sepia(10%) hue-rotate(0deg) saturate(0%); /* Chuyển hình ảnh thành màu vàng */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt khi chuyển đổi */
+}
+.riott:hover{
+    filter: brightness(0) invert(1);
+}
+.ung{
+    height:19px;
+    width:116px;
+    margin-top: 50px;
+}
+.text {
+    font-size: 16px;
+    color: #7e7e7e;
+    text-align: center;
+    max-width: 700px;
+    margin:5px;
+}
+.baomat {
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử bên trong */
+    gap: 30px; /* Khoảng cách giữa các mục */
+    text-transform: uppercase; /* In hoa chữ */
+    margin:5px;
+}
+.baomatt{
+    position: relative;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    padding:10px;
+    cursor: pointer; /* Thay đổi con trỏ thành con trỏ nhấp chuột */
+}
+.baomatt:hover{
+    background-color: #242323;
+}
+.tuoi{
+    margin-bottom: 30px;
+    border:10px solid rgb(41, 38, 38);
+    border-radius: 5px;
+}

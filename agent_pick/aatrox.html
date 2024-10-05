@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AATROX</title>
+    <link rel="stylesheet" href="aatrox.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="imgs/logoriotgame.png" class="logo1" height="70" alt="Logo 1">
+            </a>
+            
+            <a href="../index.html">
+                <img src="imgs/logoriotgame2.png" class="logo2" height="30" alt="Logo 2">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="#">TRÒ CHƠI</a>
+            <a href="#">TƯỚNG</a>
+            <a href="#">TIN TỨC</a>
+            <a href="#">CHI TIẾT CẬP NHẬT</a>
+            <a href="#">ESPORTS</a>
+            <a href="#">VŨ TRỤ</a>
+            <a href="#">HỖ TRỢ</a>
+        </nav>
+        <div class="right-section">
+            <img src="imgs/seachicon.png" alt="Globe" class="icon-globe-icon" height="20">
+            <img src="imgs/globeicon.png" alt="Globe" class="icon-globe-icon" height="20">
+            <button class="play-now-btn1">CHƠI NGAY</button>
+            <div class="menu-icon">☰</div>
+        </div>
+        <div class="menu-dropdown">
+            <img src="imgs/logoriotgame2.png" class="logo1-dropdown" height="30" alt="Logo 1">
+            <div class="close-menu">✕</div> <!-- Dấu X để đóng menu -->
+            <nav class="menu1-dropdown">
+                <a href="#">TRÒ CHƠI</a>
+                <a href="#">TƯỚNG</a>
+                <a href="#">TIN TỨC</a>
+                <a href="#">CHI TIẾT CẬP NHẬT</a>
+                <a href="#">ESPORTS</a>
+                <a href="#">VŨ TRỤ</a>
+                <a href="#">HỖ TRỢ</a>
+            </nav>
+            <button class="play-now-btn-dropdown">CHƠI NGAY</button> <!-- Nút CHƠI NGAY trong dropdown -->
+        </div>
+    </header>
+
+    <section>
+        <div class="section1">
+            <img src="imgs/Aatrox_0.jpg" class="imgone">
+            <div class="overlay">
+                <div class="gioithieu">
+                    <h1 class="text1">Quỷ Kiếm Darkin</h1>
+                    <h2 class="text2">Aatrox</h2>
+                    <p style="
+                    height:auto;
+                    word-wrap: break-word; /* Tự động xuống dòng nếu quá dài */
+                    font-size:16px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    color:rgb(255, 255, 255);
+                    margin:10px 10px;">Từng là những người bảo hộ cao quý của Shurima để chống lại Hư Không, Aatrox cùng đồng bọn cuối cùng lại trở thành một mối hiểm họa còn lớn hơn đối với cả Runeterra. Chỉ bị đánh bại bằng món phép thuật khôn ngoan của nhân loại. Nhưng sau nhiều thế kỉ bị giam cầm, Aatrox là kẻ đầu tiên một lần nữa tìm về với tự do, bằng cách vấy bẩn và biến đổi những kẻ ngu ngốc dám cầm thử thứ vũ khí ma thuật chứa đựng linh hồn hắn. Giờ đây, với da thịt chiếm đoạt được, hắn quay trở lại Runeterra trong một hình hài khủng khiếp tương tự trước đây, tìm kiếm sự tàn sát và trả món hận thù năm xưa.</p>
+                </div>
+                <div class="nhom2">
+                    <div class="role">
+                        <div class="rolee">
+                            <div class="icon-container">
+                                <img src="icon\Top.webp" alt="Vai trò Đấu Sĩ" class="vaitro">
+                                <p class="label">Vai Trò</p>
+                                <p class="label2">Đấu Sĩ</p>
+                            </div>
+                            <div class="icon-container">
+                                <img src="icon\Top.webp" alt="Vai trò Đấu Sĩ" class="vaitro">
+                                <p class="label">Độ Khó </p>
+                                <p class="label2">Trung Bình </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="duong"></div>
+                    <div class="thongthao">
+                        <a>thông thạo tướng</a>
+                        <a href="https://u.gg/lol/vn_vn/champions/aatrox/build">OP.GG</a>
+                        <a href="https://www.leagueofgraphs.com/vn/champions/builds/aatrox">u.gg</a>
+                        <a href="https://vn.op.gg/champion/Aatrox/statistics/mid">leagueofgraphs.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="kynang">
+                <h2 class="kynangg">Kỹ Năng</h2>
+                <div class="skill-images">
+                    <div>
+                        <img src="imgs/Aatrox_Passive.png" alt="Nội Tại" onclick="playVideo('Video/A.mp4',  'Đường Kiếm Tuyệt Diệt', 'NỘI TẠI', 'Theo chu kỳ, đòn đánh kế tiếp của Aatrox gây thêm sát thương vật lý và hồi máu.')">
+                        <p class="skill-description">Đường Kiếm Tuyệt Diệt</p>
+                    </div>
+                    <div>
+                        <img src="imgs/AatroxQ.png" alt="Kỹ năng Q" onclick="playVideo('Video/Q.mp4','Quỷ Kiếm Darkin','Q', 'Aatrox đập kiếm xuống đất, gây sát thương vật lý. Có thể chém ba lần, mỗi lần có một diện tác dụng khác nhau.')">
+                        <p class="skill-description">Quỷ Kiếm Darkin</p>
+                    </div>
+                    <div>
+                        <img src="imgs/AatroxW.png" alt="Kỹ năng W" onclick="playVideo('Video/W.mp4', 'Xiềng Xích Địa Ngục','W','Aatrox đập kiếm xuống đất, gây sát thương lên kẻ địch đầu tiên trúng phải. Tướng và quái to phải nhanh rời vùng tác động nếu không muốn bị kéo về tâm và chịu sát thương lần nữa.')">
+                        <p class="skill-description">Xiềng Xích Địa Ngục</p>
+                    </div>
+                    <div>   
+                        <img src="imgs/AatroxE.png" alt="Kỹ năng E" onclick="playVideo('Video/E.mp4', 'Bộ Pháp Hắc Ám', 'E','Nội tại giúp Aatrox hồi máu khi gây sát thương lên tướng. Kích hoạt giúp Aatrox lướt theo hướng chỉ định.')">
+                        <p class="skill-description">Bộ Pháp Hắc Ám</p>
+                    </div>
+                    <div>
+                        <img src="imgs/AatroxR.png" alt="Kỹ năng R" onclick="playVideo('Video/R.mp4', 'Chiến Binh Tận Thế', 'R','Nội tại giúp Aatrox hồi máu khi gây sát thương lên tướng. Kích hoạt giúp Aatrox lướt theo hướng chỉ định.')">
+                        <p class="skill-description">Chiến Binh Tận Thế</p>
+                    </div>
+                </div>
+            </div>
+            <div class="noitai">
+                <video id="videoPlayer" autoplay muted loop>
+                    <source id="videoSource" src="Video/A.mp4" type="video/mp4">
+                </video>
+                <p class="text6" >Đường Kiếm Tuyệt Diệt</p>
+                <p class="text4" >NỘI TẠI</p>
+                <p class="text5" >Theo chu kỳ, đòn đánh kế tiếp của Aatrox gây thêm sát thương vật lý và hồi máu, dựa theo máu tối đa của mục tiêu.</p>
+            </div>
+        </div>
+        <div class="section3">
+            <p class="text3">trang phục hiện có</p>
+            <img src="imgs/Aatrox_2.jpg" class="second-image" id="main-image" alt="Aatrox Skin">
+            <div class="phan2">
+                <div>
+                    <img src="imgs/Aatrox_0.jpg" alt="Skin 1" onclick="changeImage('imgs/Aatrox_0.jpg')">
+                    <p>Aatrox</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_1.jpg" alt="Skin 2" onclick="changeImage('imgs/Aatrox_1.jpg')">
+                    <p>Aatrox Công Lý</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_2.jpg" alt="Skin 3" onclick="changeImage('imgs/Aatrox_2.jpg')">
+                    <p>Aatrox Máy Móc</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_3.jpg" alt="Skin 4" onclick="changeImage('imgs/Aatrox_3.jpg')">
+                    <p>Aatrox Thợ Săn Đại Dương</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_20.jpg" alt="Skin 5" onclick="changeImage('imgs/Aatrox_20.jpg')">
+                    <p>Aatrox Huyết Nguyệt</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_20.jpg" alt="Skin 6" onclick="changeImage('imgs/Aatrox_20.jpg')">
+                    <p>Aatrox Huyết Nguyệt</p>
+                </div>
+                <div>
+                    <img src="imgs/Aatrox_20.jpg" alt="Skin 7" onclick="changeImage('imgs/Aatrox_20.jpg')">
+                    <p>Aatrox Huyết Nguyệt</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <footer>
+        <div class="hotro">
+            <a class="trangchinh" href="https://www.leagueoflegends.com/vi-vn/how-to-play/">về liên minh huyền thoại</a>
+            <a class="trangchinh" href="https://support.riotgames.com/">hỗ trợ</a>
+            <a class="trangchinh" href="https://www.lolesports.com/">trang esports chính</a>
+        </div>
+        <div class="truyenthong">
+            <a href="https://www.facebook.com/LeagueoflegendsVN/">
+                <img src="imgs\facebookk.png" class="anh">
+            </a>
+            <a href="https://www.instagram.com/lmhtvietnam/">
+                <img src="imgs\instagramm.png" class="anh">
+            </a>
+            <a href="https://www.youtube.com/@lmhtvietnam">
+                <img src="imgs\youtubee.png" class="anh">
+            </a>
+        </div>
+        <div class="nhom">
+            <a href="http://www.riotgames.com/">
+                <img src="imgs/logoriotgame.png" class="riott">
+            </a>
+            <img src="imgs/unggames.png" class="ung" >
+        </div>
+        <div class="text">
+            <p>© 2009-2022 bởi Tập Đoàn Riot Games. LIÊN MINH HUYỀN THOẠI và mọi logo liên quan là nhãn hiệu, nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
+        </div>
+        <div class="baomat">
+            <a class="baomatt" href="https://www.riotgames.com/vi/privacy-notice">chính sách bảo mật</a>
+            <a class="baomatt" href="https://www.riotgames.com/vi/terms-of-service">điều khoản sự dụng (riot)</a>
+            <a class="baomatt">tùy chọn cookies</a> 
+        </div>
+        <div class="tuoi">
+            <img src="imgs/18+.png">
+        </div>
+    </footer>
+
+
+
+    <script>
+        //3gach
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active'); // Thay đổi lớp active để hiện/ẩn menu
+        });
+        //thay đổi hình ảnh
+        function changeImage(imageSrc) {
+            document.getElementById('main-image').src = imageSrc;
+        }
+
+        function playVideo(videoPath, text3, text4, text5) {
+            var video = document.getElementById("videoPlayer");
+            var source = document.getElementById("videoSource");
+            source.src = videoPath;
+            video.load(); // Tải lại video mới
+            video.play(); // Đảm bảo video phát lại sau khi load
+            // Cập nhật văn bản
+            document.getElementById("text3").textContent = text3;
+            document.getElementById("text4").textContent = text4;
+            document.getElementById("text5").textContent = text5;
+        }
+
+                // Xử lý nhấp vào biểu tượng ba gạch để mở menu
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+            const dropdownMenu = document.querySelector('.menu-dropdown');
+            dropdownMenu.classList.toggle('show'); // Thêm/loại bỏ class show để mở/đóng menu
+        });
+
+        // Xử lý nhấp vào dấu X để đóng menu
+        document.querySelector('.close-menu').addEventListener('click', function() {
+            const dropdownMenu = document.querySelector('.menu-dropdown');
+            dropdownMenu.classList.remove('show'); // Loại bỏ class show để đóng menu
+        });
+    </script>
+</body>
+</html>

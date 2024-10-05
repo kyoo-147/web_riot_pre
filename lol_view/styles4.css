@@ -1,0 +1,207 @@
+.backdrop-main {
+    position: relative;
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn trái */
+    height: 60vh; /* Hoặc chiều cao cụ thể */
+    padding: 20px; /* Khoảng cách bên trong cho backdrop */
+}
+
+.mediapromo-content {
+    max-width: 400px; /* Điều chỉnh chiều rộng tối đa nếu cần */
+    padding: 20px; /* Khoảng cách bên trong */
+    color: rgb(255, 254, 254); /* Màu chữ */
+    text-align: left; /* Căn trái */
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    flex-direction: column; /* Đặt chiều dọc cho các phần tử */
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+.supertitle1,
+.title1 {
+    margin: 0; /* Bỏ khoảng cách mặc định */
+}
+
+.title1 {
+    margin-top: 10px; /* Tạo khoảng cách 10px giữa hai phần tử */
+}
+.mediapromo-links1 {
+    display: block; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa nút button */
+    margin-top: 20px; /* Khoảng cách phía trên cho button */
+    text-decoration: none; /* B�� đư��ng d��n */
+    color: #0c0c0c; /* Màu chữ nếu cần */
+    padding: 15px 25px; /* Khoảng cách bên trong nút */
+    background-color: #C8AA6E; /* Màu nền cho nút */
+    border-radius: 5px; /* Đư��ng viền */
+    transition: background-color 0.3s ease; /* Hiệu ứng tăng trội */
+}
+.mediapromo-links1:hover {
+    background-color: #d3bb8b; /* Màu nền khi hover */
+}
+.supertitle1 p {
+    margin-bottom: 10px; /* Khoảng cách dư��i cho tiêu đ�� phụ */
+    font-size: 20px; /* Kích thước chữ */
+    color: #ffffff; /* Màu chữ nếu cần */
+}
+.title1 h4 {
+    margin-bottom: 10px; /* Khoảng cách dư��i cho tiêu đ�� chính */
+    font-size: 60px; /* Kích thước chữ */
+    color: #ffffff; /* Màu chữ nếu cần */
+}
+.blade-content {
+    position: relative; 
+    top: 0; /* Vị trí từ trên */
+    left: 0; /* Vị trí từ trái */
+    width: 100%; /* Chiều rộng 100% */
+    height: 90vh; /* Chiều cao 100% */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền 50% trong suốt */
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    flex-direction: column; /* Chuyển chiều theo chiều */
+    background-image: url('img/backdrop2.png');
+}
+
+.icon-tab--media {
+    flex: 1; /* Chiếm không gian bên trái */
+    display: flex; /* Sử dụng Flexbox */
+    align-items: flex-start; /* Căn lên phía trên */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin-left: 20px; /* Dịch video qua phải một chút */
+}
+
+.icon-tab-media-position {
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Đặt chiều dọc cho các phần tử */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    margin-top: 10px; /* Khoảng cách giữa video và nội dung */
+}
+
+.icon-tab-media-content {
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Đặt chiều dọc cho các phần tử */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+}
+.icon-tab-media-content-header span {
+    margin-right: 10px; /* Khoảng cách giữa các ký tự */
+    font-size: 18px; /* Kích thước chữ */
+    color: #ffffff; /* Màu chữ nếu cần */
+}
+.icon-tab--tabs {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa cho các item theo chiều ngang */
+    margin-top: 20px; /* Khoảng cách phía trên cho các icon */
+}
+
+.icon-tab--tab-container {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa các item theo chiều ngang */
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+    max-width: 600px; /* Chiều rộng tối đa của container */
+}
+
+.icon-tab--tab-item {
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Đảm bảo văn bản nằm dưới biểu tượng */
+    align-items: center; /* Căn giữa văn bản và biểu tượng */
+    margin: 0 15px; /* Tạo khoảng cách giữa các item */
+    text-align: center; /* Căn giữa văn bản bên trong item */
+}
+
+.icon-tab--tab-item img {
+    width: 50px; /* Chiều rộng biểu tượng */
+    height: 50px; /* Chiều cao biểu tượng */
+    margin-bottom: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+.innerWrapper {
+    width: 570px; /* Chiều rộng khung video (550px + 20px để bao gồm padding) */
+    height: 570px; /* Chiều cao khung video (550px + 20px để bao gồm padding) */
+    border-radius: 50%; /* Làm cho khung thành hình tròn */
+    overflow: hidden; /* Ẩn phần video ra ngoài khung */
+    display: flex; /* Sử dụng Flexbox cho video */
+    align-items: center; /* Căn giữa video theo chiều dọc */
+    justify-content: center; /* Căn giữa video theo chiều ngang */
+    border: 2px solid #887b04; /* Đường viền trắng xung quanh khung */
+    padding: 5px; /* Tạo khoảng cách giữa video và viền */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước của khung */
+}
+
+.game-video1 {
+    width: 100%; /* Đảm bảo video chiếm toàn bộ chiều rộng của khung */
+    height: 100%; /* Đảm bảo video chiếm toàn bộ chiều cao của khung */
+    border-radius: 50%; /* Bo góc video cho tròn */
+    transform: translate(0, 0); /* Đảm bảo video không bị dịch chuyển */
+}
+.icon-tab-media-content-description p{
+    margin-top: 20px; /* Khoảng cách giữa văn bản và nội dung */
+    color: #ffffff; /* Màu chữ nếu cần */
+    font-size: 16px; /* Kích thước chữ */
+}
+.icon-tab-media-content-header {
+    margin-top: 40px; /* Khoảng cách giữa video và tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+@media (max-width: 768px) {
+    .backdrop-main {
+        flex-direction: column; /* Đổi thành chiều dọc */
+        align-items: center; /* Căn giữa theo chiều ngang */
+    }
+
+    .icon-tab--media {
+        margin-left: 0; /* Không có margin bên trái */
+        order: 2; /* Đặt video ở vị trí thứ hai */
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    }
+    .icon-tab-media-content span {
+        font-size: 14px; /* Kích thước chữ */
+        margin-bottom: 5px; /* Không có margin bên dư��i */
+    }
+    .icon-tab-media-content p {
+        font-size: 12px; /* Kích thước chữ */
+        margin-top: 5px; /* Không có margin bên trên */
+        margin-bottom: 50px;
+    }
+
+    .mediapromo-content {
+        order: 1; /* Đặt nội dung ở vị trí đầu tiên */
+        align-items: center; /* Căn giữa nội dung */
+    }
+
+    .innerWrapper {
+        margin-bottom: 100px;
+        width: 100%; /* Đặt chiều rộng video 100% */
+        height: auto; /* Chiều cao tự động */
+        max-width: 250px; /*Chiều rộng tối đa cho video*/
+    }
+
+    .game-video1 {
+        width: 100%; 
+        height: auto; 
+        border-radius: 10px; /* Bo góc video */
+    }
+    .supertitle1 p,
+    .title1 h4,
+    .mediapromo-links1  {
+       display: none; /* Ẩn nội dung */
+    }
+}
+
+@media (max-width: 950px) {
+    .innerWrapper {
+        width: 100%; /* Đặt chiều rộng video 100% */
+        height: auto; /* Chiều cao tự đ��ng */
+        max-width: 400px; /*Chiều rộng tối đa cho video*/
+    }
+    .icon-tab-media-content span {
+        font-size: 10px; /* Kích thước chữ */
+        margin-bottom: 5px; /* Không có margin bên dư��i */
+    }
+    .icon-tab-media-content p {
+        font-size: 8px; /* Kích thước chữ */
+        margin-top: 5px; /* Không có margin bên trên */
+        margin-bottom: 20px;
+    }
+
+}

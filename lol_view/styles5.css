@@ -1,0 +1,33 @@
+.backdrop-video {
+    position: relative; /* Để định vị các phần tử con */
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+.game-video4 {
+    width: 100%; /* Chiều rộng video */
+    height: auto; /* Chiều cao tự động */
+}
+
+.button-content {
+    position: absolute; /* Để có thể đặt nút ở giữa video */
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    top: 50%; /* Đặt vị trí từ trên xuống 50% */
+    left: 50%; /* Đặt vị trí từ trái sang 50% */
+    transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+}
+
+.play-button1 {
+    background-color: #C8AA6E; /* Màu nền của nút */
+    border: none; /* Bỏ viền */
+    padding: 15px 25px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+    border-radius: 5px; /* Bo góc */
+}
+.play-button1:hover {
+    background-color: #d3bb8b;
+}

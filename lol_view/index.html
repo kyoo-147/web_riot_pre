@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="texts.css">
+    <link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+
+            <div>
+        <a href="../index.html">
+            <img src="img/logoriotgame.png" alt="Logo 1" class="logo1" height="70">
+        </a>
+    </div>
+    
+    <div>
+        <a href="../index.html">
+            <img src="img/logoriotgame2.png" alt="Logo 2" class="logo2" height="30">
+        </a>
+    </div>
+
+        </div>
+        <nav class="menu">
+            <a href="#">TRÒ CHƠI</a>
+            <a href="#">TƯỚNG</a>
+            <a href="#">TIN TỨC</a>
+            <a href="#">CHI TIẾT CẬP NHẬT</a>
+            <a href="#">ESPORTS</a>
+            <a href="#">VŨ TRỤ</a>
+            <a href="#">HỖ TRỢ</a>
+        </nav>
+        <div class="right-section">
+            <img src="img/seachicon.png" alt="Search" class="icon-search-icon" height="20">
+            <img src="img/globeicon.png" alt="Language" class="icon-globe-icon" height="20">
+            <button class="play-now-btn1" id="playButton" data-toggle="modal">CHƠI NGAY</button>
+            <div class="menu-icon">☰</div> 
+        </div>
+    </header>
+    
+    <main>
+        <span class="video">
+            <section class="hero">
+                <video data-testid="backdrop-background" autoplay muted loop playsinline class="dKuaJR">
+                    <source src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm" type="video/webm">
+                </video>
+                <div class="logo-and-button">
+                    <div class="logo">
+                        <img src="img/logo.webp" alt="Logo">
+                    </div>
+                    <div class="play-now-btn">
+                        <button class="play-button" id="playButton"data-toggle="modal">Chơi Miễn Phí</button>
+                    </div>
+                </div>
+            </section>
+        </span>
+        <span class="tintuc">
+            <section class="content">
+                <div class="TNB">
+                    <h2>Tin Nổi Bật</h2>
+                </div>
+                <div class="news-list">
+                    <div class="champion-list">
+                        <!-- Các tướng sẽ được thêm vào đây -->
+                        <div class="champion">
+                            <img src="img/champion1.webp" alt="Tướng 1" class="champion-image">
+                            <h3>Tướng 1</h3>
+                            <p>Mô tả tướng 1</p>
+                        </div>
+                        <div class="champion">
+                            <img src="img/champion2.webp" alt="Tướng 2" class="champion-image">
+                            <h3>Tướng 2</h3>
+                            <p>Mô tả tướng 2</p>
+                        </div>
+                        <div class="champion">
+                            <img src="img/champion3.webp" alt="Tướng 3" class="champion-image">
+                            <h3>Tướng 3</h3>
+                            <p>Mô tả tướng 3</p>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="button-arrow">
+                            <button id="prev">&larr;</button> <!-- Mũi tên trái -->
+                            <hr>
+                            <button id="next">&rarr;</button> <!-- Mũi tên phải -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </span>
+        
+    <span class="cactuong">   
+        <section class="general">
+            <div class="backdrop">
+                <div class="left-content">
+                    <p>Chọn Ngay Một</p>
+                    <h3>TƯỚNG</h3>
+                    <p>Cho dù thích lao vào giao tranh, thích hỗ trợ đồng đội hoặc cả hai, bạn sẽ luôn tìm thấy vị trí thích hợp dành cho mình trong Summoner's Rift.</p>
+                    <div class="buttons">
+                        <!-- <button class="button-1">KHÁM PHÁ THÊM CÁC VỊ TƯỚNG</button> -->
+                        <!-- <a href="../agent_view/index.html" class="button-1">KHÁM PHÁ THÊM CÁC VỊ TƯỚNG</a> -->
+                        <button class="button-1" onclick="location.href='../agent_view/index.html';">KHÁM PHÁ THÊM CÁC VỊ TƯỚNG</button>
+                        <button class="button-2"data-toggle="modal">CHƠI NGAY</button>
+                    </div>
+                    <div class="icons">
+                        <div class="icon" data-image="img/general.webp">
+                            <img src="img/icon1.webp" alt="Icon 1">
+                            <p>Sát Thủ</p>
+                        </div>
+                        <div class="icon" data-image="img/general-1.webp">
+                            <img src="img/icon2.webp" alt="Icon 2">
+                            <p>Đấu Sĩ</p>
+                        </div>
+                        <div class="icon" data-image="img/general-2.webp">
+                            <img src="img/icon3.webp" alt="Icon 3">
+                            <p>Pháp Sư</p>
+                        </div>
+                        <div class="icon" data-image="img/general-3.webp">
+                            <img src="img/icon3.webp" alt="Icon 3">
+                            <p>Xạ Thủ</p>
+                        </div>
+                        <div class="icon" data-image="img/general-4.webp">
+                            <img src="img/icon4.webp" alt="Icon 4">
+                            <p>Hỗ Trợ</p>
+                        </div>
+                        <div class="icon" data-image="img/general-5.webp">
+                            <img src="img/icon5.webp" alt="Icon 5">
+                            <p>Đỡ Đòn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="general1">
+                    <img src="img/general.webp" alt="TUONG" class="general-image">       
+                    <h2>AKALI</h2>
+                    <p>Sát thủ đơn độc</p>
+                </div>
+            </div>    
+        </section> 
+    </span>       
+    <span class="nen">
+        <section class="MediaPromoBlade">
+            <div class="backdrop-background">
+                <div class="mediapromo-image">
+                    <img src="img/mediapromo.webp" alt="Media Promo">
+                </div>
+                <div class="mediapromo-main-container">
+                    <div class="content-container">
+                        <p class="supertitle">HẠ GỤC KẺ ĐỊCH</p>
+                        <p class="title">MỘT CÁCH SANG CHẢNH</p>
+                        <p class="description">Thay đổi diện mạo các vị tướng yêu thích với trang phục để tạo nên điểm nhấn của riêng bạn.</p>
+                    </div>
+                    <div class="mediapromo-links">
+                        <a role="button" class="Buttons">
+                            <span>
+                                <div class="cta-content" data-toggle="modal">Chơi Ngay</div>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </span>
+    
+    
+    <span class="nen-video">
+        <section class="FeaturedChampions">
+            <div class="blade-content">
+                <div class="backdrop-main">
+                    <div class="mediapromo-content">
+                        <div class="supertitle1">
+                            <p>RẤT NHIỀU CÁCH</p>
+                        </div>
+                        <div class="title1">
+                            <h4>CHƠI</h4>
+                        </div>
+                        <div class="mediapromo-links1">
+                            <a role="button" class="Buttons1">
+                                <span>
+                                    <div class="cta-content1" data-toggle="modal">Chơi Ngay</div>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="icon-tab--tabs">
+                            <div class="icon-tab--tab-container">
+                                <div class="icon-tab--tab-item" data-video="videos/game-video1.mp4">
+                                    <img src="img/item1.webp" alt="Item 1">
+                                    <p>SUMMONER'S RIF</p>
+                                </div>
+                                <div class="icon-tab--tab-item" data-video="videos/game-video2.mp4">
+                                    <img src="img/item2.webp" alt="Item 2">
+                                    <p>ARAM</p>
+                                </div>
+                                <div class="icon-tab--tab-item" data-video="videos/game-video3.mp4">
+                                    <img src="img/item3.webp" alt="Item 3">
+                                    <p>Đấu Trường Chân Lý</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-tab--media" >
+                        <div class="icon-tab-media-position">
+                            <div class="innerWrapper" >
+                                <video controls class="game-video1" loop autoplay muted playsinline >
+                                    <source src="videos/game-video1.mp4" type="video/mp4">
+                                    Trình duyệt của bạn không hỗ trợ video.
+                                </video>
+                            </div>
+                            <div class="icon-tab-media-content">
+                                <div class="icon-tab-media-content-header">
+                                    <span class="icon-tab-media-title">CHẾ ĐỘ CHƠI PHỔ BIẾN NHẤT</span>
+                                </div>
+                                <div class="icon-tab-media-content-description">
+                                    <p>Dọn đường, tham gia giao tranh tổng, phá hủy Nhà Chính của địch trước khi Nhà Chính của bạn bị phá hủy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </span>
+    <span class="videocuoi">
+        <section class="CenteredPromotion">
+            <div class="backdrop-video">
+                <video class="game-video4" loop autoplay muted playsinline>
+                    <source src="videos/game-video4.mp4" type="video/mp4"> 
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+                
+                <div class="button-content">
+                    <button class="play-button1" data-toggle="modal">Chơi Miễn Phí</button>
+                </div>
+            </div>
+        </section>
+    </span>
+    
+    </main>
+    <footer>
+        <div class="hotro">
+            <p class="trangchinh">về liên minh huyền thoại</p>
+            <p class="trangchinh">hỗ trợ</p>
+            <p class="trangchinh">trang esports chính</p>
+        </div>
+        <div class="truyenthong">
+            <a href="https://www.facebook.com/LeagueoflegendsVN/">
+                <img src="img\facebookk.png" class="anh">
+            </a>
+            <a href="https://www.instagram.com/lmhtvietnam/">
+                <img src="img\instagramm.png" class="anh">
+            </a>
+            <a href="https://www.youtube.com/@lmhtvietnam">
+                <img src="img\youtubee.png" class="anh">
+            </a>
+        </div>
+        <div class="nhom">
+            <a href="http://www.riotgames.com/">
+                <img src="img\logoriotgame.png" class="riott">
+            </a>
+            <img src="img\unggames.png" class="ung" >
+        </div>
+        <div class="text">
+            <p>© 2009-2022 bởi Tập Đoàn Riot Games. LIÊN MINH HUYỀN THOẠI và mọi logo liên quan là nhãn hiệu, nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
+        </div>
+        <div class="baomat">
+            <p class="baomatt">chính sách bảo mật</p>
+            <p class="baomatt">điều khoản sự dụng (riot)</p>
+            <p class="baomatt">tùy chọn cookies</p> 
+        </div>
+        <div class="tuoi">
+            <img src="img\18+.png">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <div class="RiotBar-RsoModal" style="display: none;"> <!-- Ẩn modal ban đầu -->
+        <div class="RiotBar-RsoModal-content">
+            <div class="close-icon" role="button" aria-label="Close">
+                &times; <!-- Biểu tượng "X" -->
+            </div>
+            <div class="header">
+                <h2>Chuẩn Bị Sẵn Sàng Để Chơi</h2>
+            </div>
+            <div class="nutbutton">
+                <div class="nutbutton-container">
+                    <p>Tôi không có Tài Khoản Riot</p>
+                    <a role="button" class="TAOTAIKHOAN">
+                        <span>
+                            <div class="cta-content2">Tạo Tài Khoản</div>
+                        </span>
+                    </a>
+                </div>
+                <div class="nutbutton-container">
+                    <p>Tôi đã có Tài Khoản Riot</p>
+                    <a role="button" class="DANGNHAP">
+                        <span>
+                            <div class="cta-content2">Đăng Nhập</div>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>         
+    </div>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* div {
+    
+    padding: 30px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    margin: 20px;
+} */
+.RiotBar-RsoModal {
+    position: fixed; /* Đặt modal ở vị trí cố định */
+    top: 0; /* Căn trên cùng */
+    left: 0; /* Căn bên trái */
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối với độ trong suốt */
+    display: flex; /* Sử dụng Flexbox để căn giữa */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+}
+
+.RiotBar-RsoModal-content {
+    position: absolute; /* Đổi về relative để close-icon có thể căn theo */
+    top: 50%; /* Đặt từ trên 50% */
+    left: 50%; /* Đặt từ trái 50% */
+    transform: translate(-50%, -50%); /* Dịch chuyển lại để căn giữa */
+    background-color: rgb(10, 20, 40); /* Màu nền cho modal */
+    border-radius: 8px; /* Bo góc cho modal */
+    padding: 20px; /* Khoảng cách bên trong */
+    max-width: 800px; /* Chiều rộng tối đa của modal */
+    width: 90%; /* Chiều rộng 90% */
+    height: 400px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Đổ bóng cho modal */
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+}
+
+.close-icon {
+    width: 40px; /* Chiều rộng của nút đóng */
+    height: 40px; /* Chiều cao của nút đóng */
+    background-color: #C8AA6E; /* Màu nền */
+    color: rgba(0, 0, 0, 0.7); /* Màu chữ */
+    border-radius: 50%; /* Bo tròn */
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 10px; /* Cách cạnh trên 10px */
+    right: 10px; /* Cách cạnh phải 10px */
+    font-size: 24px; /* Kích thước chữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+
+
+.close-icon:hover {
+    background-color: rgba(217, 238, 24, 0.7); /* Màu nền khi hover */
+}
+
+.header h2 {
+    margin-top: 50px; /* Bỏ khoảng cách mặc định */
+    font-size: 50px; /* Kích thước chữ cho tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+    color: white;
+}
+
+.nutbutton {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa với khoảng cách giữa các nút */
+    width: 100%; /* Đảm bảo nhóm nút chiếm toàn bộ chiều rộng */
+    margin-top: 150px; /* Khoảng cách trên cho nhóm nút */
+}
+
+.nutbutton-container {
+    margin-right: 30px; /* Khoảng cách giữa các nút */
+}
+
+.nutbutton-container:last-child {
+    margin-right: 0; /* Bỏ khoảng cách bên phải cho nút cuối cùng */
+}
+
+
+.nutbutton-container p {
+    margin-bottom: 10px; /* Khoảng cách dưới cho văn bản */
+    color: white; /* Màu chữ */
+}
+.DANGNHAP {
+    display: inline-block; /* Để nút không chiếm toàn bộ chiều rộng */
+    padding: 20px 40px; /* Khoảng cách bên trong nút */
+    background-color: #C8AA6E; /* Màu nền cho nút */
+    color: rgb(8, 8, 8); /* Màu chữ cho nút */
+    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    border-radius: 5px; /* Bo góc cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.DANGNHAP:hover {
+    background-color: #d3bb8b; /* Màu nền khi hover */
+}
+.TAOTAIKHOAN {
+    display: inline-block; /* Để nút không chiếm toàn bộ chiều rộng */
+    padding: 20px 40px; /* Khoảng cách bên trong nút */
+    background-color: #59C1DE; /* Màu nền cho nút */
+    color: rgb(8, 8, 8); /* Màu chữ cho nút */
+    text-decoration: none; /* B�� gạch chân cho liên kết */
+    border-radius: 5px; /* Bo góc cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.TAOTAIKHOAN:hover {
+    background-color: #7acde4; /* Màu nền khi hover */
+}
+.RiotBar-RsoModal {
+    display: none; /* Ẩn modal khi không cần thiết */
+    /* Các thuộc tính khác như trước */
+}
+@media (max-width: 768px) { /* Thay đổi cho điện thoại */
+    .RiotBar-RsoModal-content {
+        width: 95%; /* Mở rộng chiều rộng cho điện thoại */
+        height: auto; /* Đặt chiều cao tự động */
+        padding: 15px; /* Giảm khoảng cách bên trong */
+    }
+
+    .header h2 {
+        font-size: 24px; /* Giảm kích thước chữ cho tiêu đề */
+    }
+
+    .nutbutton {
+        flex-direction: row; /* Giữ nút nằm ngang */
+        margin-top: 20px; /* Giảm khoảng cách trên cho nhóm nút */
+    }
+
+    .nutbutton-container {
+        margin-right: 10px; /* Bỏ khoảng cách bên phải */
+        margin-bottom: 15px; /* Thêm khoảng cách dưới cho các nút */
+    }
+
+    .close-icon {
+        width: 30px; /* Giảm kích thước nút đóng */
+        height: 30px; /* Giảm kích thước nút đóng */
+        font-size: 20px; /* Giảm kích thước chữ */
+    }
+    .DANGNHAP,
+    .TAOTAIKHOAN {
+        padding: 8px 16px; /* Giảm khoảng cách bên trong cho điện thoại */
+        font-size: 12px; /* Giảm kích thước chữ cho điện thoại */
+    }
+    .nutbutton-container p {
+        margin-bottom: 10px; /* Giảm khoảng cách dư��i cho văn bản */
+        font-size: 10px; /* Giảm kích thước chữ cho điện thoại */
+    }
+}

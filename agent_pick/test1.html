@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <!-- Liên kết Font Awesome để sử dụng icon tìm kiếm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset padding và margin mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Căn giữa toàn bộ nội dung trang */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Container bao bọc thanh tìm kiếm */
+        .search-container {
+            position: relative;
+            width: 300px; /* Chiều rộng của container */
+            height: 50px; /* Chiều cao của container */
+        }
+
+        /* Wrapper chứa input và icon */
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Thanh tìm kiếm */
+        .input {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 50px; /* Kích thước ban đầu */
+            padding: 10px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: width 0.3s ease-in-out;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        /* Khi focus, thanh tìm kiếm sẽ mở rộng */
+        .input:focus {
+            width: 100%; /* Mở rộng ra toàn bộ container */
+            border-radius: 5px; /* Chuyển về góc vuông */
+            z-index: 2;
+            padding-right: 50px; /* Chừa chỗ cho icon bên phải */
+        }
+
+        /* Icon tìm kiếm */
+        .icon {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .icon i {
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* Đặt font-family cho input */
+        .input::placeholder {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #8f8f8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <div class="input-wrapper">
+            <!-- Thanh tìm kiếm -->
+            <input type="text" class="input" placeholder="Tìm kiếm..." id="searchInput">
+            <!-- Icon tìm kiếm -->
+            <button class="icon">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
